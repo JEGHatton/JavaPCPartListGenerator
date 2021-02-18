@@ -26,7 +26,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="5774a5e3-4e00-400a-861c-ac3f9512994e">
-        <schema name="javaproject" object-types="procedure, function, constraint, dataset trigger, index, table, column, view" />
+        <schema name="javaproject" object-types="column, function, table, view" />
       </connection>
     </loaded-nodes>
   </component>
@@ -175,6 +175,7 @@ ORDER BY
 DESC
 LIMIT 1
 )]]></console>
+      <console name="Connection LocalHost 1" type="STANDARD" schema="javaproject" session="Main"><![CDATA[(SELECT ram.RamID, ram.ProductName, ram.Price FROM ram WHERE ram.Price < '500' AND (SELECT MAX(RAM.Speed) AND MIN(RAM.Timing1) AND MIN(RAM.Timing2) AND MIN(RAM.Timing3) AND MIN(RAM.Timing4) FROM ram)GROUP BY ram.RamID ORDER BY ram.speed DESC LIMIT 1)]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
